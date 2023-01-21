@@ -1,6 +1,7 @@
 package main
 
 import (
+	"image/color"
 	"log"
 
 	"github.com/hajimehoshi/ebiten/v2"
@@ -9,9 +10,12 @@ import (
 
 type Game struct{}
 
-func (g *Game) Update() error { return nil }
+func (g *Game) Update() error {
+	return nil
+}
 
 func (g *Game) Draw(screen *ebiten.Image) {
+	screen.Fill(color.RGBA{0x00, 0x99, 0x00, 0xFF})
 	ebitenutil.DebugPrint(screen, "Hello world!")
 }
 
